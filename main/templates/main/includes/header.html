@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">АвтоМир</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home' %}">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'audi' %}">Audi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mercedes' %}">Mercedes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lada' %}">Lada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'haval' %}">Haval</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

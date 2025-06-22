@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Добро пожаловать в АвтоМир!</h1>
+    <p class="lead">Лучший выбор автомобилей по доступным ценам</p>
+    <hr>
+
+    <div class="row mt-5">
+        {% for brand in brands %}
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="{% static brand.image %}" class="card-img-top" alt="{{ brand.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ brand.name }}</h5>
+                    <a href="{% url brand.url_name %}" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

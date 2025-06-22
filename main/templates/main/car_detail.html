@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}{{ brand }} | АвтоМир{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static image %}" class="img-fluid rounded" alt="{{ brand }}">
+        </div>
+        <div class="col-md-6">
+            <h1 class="display-4">{{ brand }} {{ model }}</h1>
+            <p class="lead">{{ description }}</p>
+            <ul class="list-unstyled">
+                {% for spec in specs %}
+                <li><strong>{{ spec.label }}:</strong> {{ spec.value }}</li>
+                {% endfor %}
+            </ul>
+            <h3 class="my-4">Цена: {{ price }} ₽</h3>
+            <button class="btn btn-success btn-lg">Купить</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
